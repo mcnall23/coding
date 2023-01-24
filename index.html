@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>CODING!</title>
+	</head>
+
+<!-- CONTENT OF PAGE -->
+<body>
+	<div id="mainContainer">
+		<img id="surpriseImage" src="https://media.giphy.com/media/l0HlMr2G3EKFgpUY0/giphy.gif"></img>
+		<audio id="surpriseSound" src="https://www.zapsplat.com/wp-content/uploads/2015/sound-effects-21014/zapsplat_sport_air_horn_soccer_blast_tune_21154.mp3"></audio>
+		<p>What is the magic word?</p>
+		<input type="text" placeholder=""></input>
+		<button onclick="getInput()">Submit</button>
+	</div>
+</body>
+
+<!-- SCRIPTED ACTIONS ON PAGE -->
+<script>
+	function getInput(){
+		const userInput = document.querySelector('input').value;
+  		console.log(userInput);
+  		
+  		if (userInput == "please") {
+    		document.getElementById("surpriseImage").style.visibility = "visible";
+    		document.getElementById("surpriseSound").play();
+    		console.log("success")
+		}
+  		else {
+  			alert("Ah ah ah! You didn't say the magic word. Try again.")
+  			console.log("failure")
+  		}
+	}
+</script>
+
+<!-- STYLING OF PAGE -->
+<style>
+#surpriseImage { 
+	visibility: hidden; 
+}
+</style>
+
+</html>
+
