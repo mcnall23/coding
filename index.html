@@ -8,7 +8,7 @@
 		<title>CODING!</title>
 	</head>
 
-<!-- CONTENT OF PAGE -->
+<!----------------------------------------------------------- CONTENT OF PAGE -------------------------------------------------------------------->
 <body>
 	<div id="mainContainer">
 		<img id="surpriseImage" src="https://media.giphy.com/media/l0HlMr2G3EKFgpUY0/giphy.gif"></img>
@@ -19,16 +19,16 @@
 	</div>
 </body>
 
-<!-- SCRIPTED ACTIONS ON PAGE -->
+<!----------------------------------------------------------- SCRIPTED ACTIONS ON PAGE ------------------------------------------------------------>
 <script>
 	function getInput(){
 		const userInput = document.querySelector('input').value;
   		console.log(userInput);
   		
-  		if (userInput == "please") {
-    		document.getElementById("surpriseImage").style.visibility = "visible";
-    		document.getElementById("surpriseSound").play();
-    		console.log("success")
+  		if (userInput == "please" || "Please") {
+    			document.getElementById("surpriseImage").style.visibility = "visible";
+    			document.getElementById("surpriseSound").play();
+    			console.log("success")
 		}
   		else {
   			alert("Ah ah ah! You didn't say the magic word. Try again.")
@@ -37,10 +37,13 @@
 	}
 </script>
 
-<!-- STYLING OF PAGE -->
+<!----------------------------------------------------------- STYLING OF PAGE --------------------------------------------------------------------->
 <style>
 #surpriseImage { 
 	visibility: hidden; 
+}
+html {
+background-color: black;
 }
 </style>
 
